@@ -20,14 +20,15 @@ public class DealsCategoryController {
 	public String createDealsCategories(Model model)
 	{
 		model.addAttribute("dealsCategories", new DealsCategory());
-		model.addAttribute("listDealsCategories", dealsCategoryService.listDealsCategories());
+		//model.addAttribute("listDealsCategories", dealsCategoryService.listDealsCategories());
+		model.addAttribute("ListDealsCategories", dealsCategoryService.getCategories());
 		return "DealsCategories";
 	}
 	@RequestMapping("/add/dealscategories")
 	public String addDealsCategories(@ModelAttribute("dealsCategories")DealsCategory dealsCategory)
 	{
 		dealsCategoryService.createDealsCategory(dealsCategory);
-		return "redirect:/dealsCategories";
+		return "redirect:/dealsCategories";		
+	}
 	
-}
 }

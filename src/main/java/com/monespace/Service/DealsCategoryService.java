@@ -29,4 +29,9 @@ public class DealsCategoryService {
 		return dealsCategoryDAOImpl.listDealsCategories();
 		
 	}
+	@Transactional
+	public String getCategories() {
+		return dealsCategoryDAOImpl.getCategories();
+	}
+	
 }
