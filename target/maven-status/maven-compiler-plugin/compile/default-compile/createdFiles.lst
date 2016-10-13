@@ -1,7 +1,12 @@
-com\monespace\DAO\DealsCategoryDAO.class
+com\monespace\Service\PropertyDealsSubCategoryService.class
 com\monespace\model\DealsCategory.class
+com\monespace\DAOImpl\PropertyDealsSubCategoryDAOImpl.class
+com\monespace\controller\DealsCategoryController.class
+com\monespace\Service\DealsCategoryService.class
+com\monespace\DAO\DealsCategoryDAO.class
 com\monespace\model\Housing.class
 com\monespace\DAOImpl\DealsCategoryDAOImpl.class
-com\monespace\controller\DealsCategoryController.class
+com\monespace\model\PropertyDealsSubCategory.class
+com\monespace\controller\PropertyDealsSubCategoryController.class
 com\monespace\controller\HousingWebPage.class
-com\monespace\Service\DealsCategoryService.class
+com\monespace\DAO\PropertyDealsSubCategoryDAO.class

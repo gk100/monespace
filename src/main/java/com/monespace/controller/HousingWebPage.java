@@ -7,7 +7,7 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class HousingWebPage 
 {
-	@RequestMapping 
+	@RequestMapping("/")
 	public ModelAndView hello() 
 	{
 		 

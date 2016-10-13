@@ -31,9 +31,40 @@ public class DealsCategoryDAOImpl implements DealsCategoryDAO {
 
 	@SuppressWarnings("unchecked")
 	public String getCategories() {
-		List<DealsCategory> categoryList = this.sessionFactory.getCurrentSession().createQuery("from DealsCategory").getResultList();
+		List<DealsCategory> categoryList = this.sessionFactory.getCurrentSession().createQuery("from DealsCategory")
+				.getResultList();
 		Gson gson = new Gson();
 		String Category = gson.toJson(categoryList);
 		return Category;
+	}
+
+	@SuppressWarnings("unchecked")
+	public DealsCategory getIdFromName(String dealsCategoryName) {
+		String query = "from DealsCategory where dealsCategoryName='" + dealsCategoryName + "'";
+		List<DealsCategory> dealsCategoryList = this.sessionFactory.getCurrentSession().createQuery(query)
+				.getResultList();
+		if (dealsCategoryList != null && !dealsCategoryList.isEmpty()) {
+			return dealsCategoryList.get(0);
+		} else {
+			return null;
+		}
+	}
+
+	public void deleteCategory(int dealsCategoryId) {
+		DealsCategory dealscategory = new DealsCategory();
+		dealscategory.setdealsCategoryId(dealsCategoryId);
+		sessionFactory.getCurrentSession().delete(dealscategory);
+	}
+
+	@SuppressWarnings("unchecked")
+	public DealsCategory getById(int dealsCategoryId) {
+		String query = "from DealsCategory where dealsCategoryId=" + dealsCategoryId;
+		List<DealsCategory> dealsCategoryList = this.sessionFactory.getCurrentSession().createQuery(query)
+				.getResultList();
+		if (dealsCategoryList != null && !dealsCategoryList.isEmpty()) {
+			return dealsCategoryList.get(0);
+		} else {
+			return null;
+		}
 	}
 }

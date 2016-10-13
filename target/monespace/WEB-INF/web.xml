@@ -16,9 +16,6 @@
 	</listener>
 
   <display-name>Archetype Created Web Application</display-name>
-  <welcome-file-list>
-    <welcome-file>index.jsp</welcome-file>
-  </welcome-file-list>
   
     <servlet>
         <servlet-name>dispatcher</servlet-name>

@@ -12,26 +12,38 @@ import com.monespace.model.DealsCategory;
 @Service
 @Transactional
 public class DealsCategoryService {
-	
+
 	@Autowired
 	private DealsCategoryDAOImpl dealsCategoryDAOImpl;
-	
+
 	@Transactional
-	public void createDealsCategory(DealsCategory dealsCategory)
-	{
+	public void createDealsCategory(DealsCategory dealsCategory) {
 		dealsCategoryDAOImpl.createDealsCategory(dealsCategory);
 	}
-	
+
 	@Transactional
-	public List<DealsCategory> listDealsCategories()
-	{
-		
+	public List<DealsCategory> listDealsCategories() {
+
 		return dealsCategoryDAOImpl.listDealsCategories();
-		
+
 	}
+
 	@Transactional
 	public String getCategories() {
 		return dealsCategoryDAOImpl.getCategories();
 	}
+
+	@Transactional
+	public DealsCategory getIdFromName(String dealsCategoryName) {
+		return dealsCategoryDAOImpl.getIdFromName(dealsCategoryName);
+	}
+	@Transactional
+	public void deleteCategory(int dealsCategoryId) {
+		dealsCategoryDAOImpl.deleteCategory(dealsCategoryId);
+	}
 	
+	public DealsCategory getById(int dealsCategoryId) {
+		return dealsCategoryDAOImpl.getById(dealsCategoryId);
+	}
+
 }
