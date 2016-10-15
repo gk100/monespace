@@ -12,11 +12,6 @@
 	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
-<style>
-table, th, td {
-	border: 1px solid black;
-}
-</style>
 </head>
 
 <body>
@@ -28,19 +23,13 @@ table, th, td {
 			<tr>
 				<td><form:label path="dealsCategoryname">Type of Deal</form:label></td>
 				<td><form:input path="dealsCategoryname" /></td>
-			</tr>
-			<tr>
 				<td><form:label path="dealsCategoryDescription">Category Description</form:label></td>
 				<td><form:input path="dealsCategoryDescription" /></td>
-			</tr>
-			<tr>
 				<td colspan="2"><input type="submit" value="Submit" /></td>
 			</tr>
 		</table>
 	</form:form>
-	<div ng-app="getDealsCategory" ng-controller="DealsCategoryController">
-		<table>
-			<tbody>
+			<table>
 				<tr>
 					<th>DEALSCATEGORYID</th>
 					<th>DEALSCATEGORYDESCRIPTION</th>
