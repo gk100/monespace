@@ -14,7 +14,7 @@ public class UserRole {
 
 	@OneToOne
 	@JoinColumn(name = "userId", nullable = false, insertable = false, updatable = false)
-	private UserDetails userDetails;
+	private User user;
 
 	@OneToOne
 	@JoinColumn(name = "roleId", nullable = false, insertable = false, updatable = false)
@@ -36,12 +36,12 @@ public class UserRole {
 		this.roleId = roleId;
 	}
 
-	public UserDetails getUserDetails() {
-		return userDetails;
+	public User getUser() {
+		return user;
 	}
 
-	public void setUserDetails(UserDetails userDetails) {
-		this.userDetails = userDetails;
+	public void setUser(User user) {
+		this.user = user;
 	}
 
 	public Role getRole() {

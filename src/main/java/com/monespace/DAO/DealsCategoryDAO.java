@@ -10,10 +10,10 @@ public interface DealsCategoryDAO {
 	public List<DealsCategory> listDealsCategories();
 
 	public DealsCategory getIdFromName(String dealsCategoryName);
-	
+
 	public String getCategories();
-	
+
 	public void deleteCategory(int dealsCategoryId);
-	
+
 	public DealsCategory getById(int dealsCategoryId);
 }

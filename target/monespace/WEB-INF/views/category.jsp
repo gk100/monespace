@@ -12,32 +12,43 @@
 	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
-<style>
-table, th, td {
-	border: 1px solid black;
-}
-</style>
+
 </head>
 
 <body>
 	<h2>Customer Information</h2>
 
-	<form:form method="POST" action="addCategory" modelAttribute="dealsCategory">
-	<form:input path="dealsCategoryId" hidden="truef"/>
+	<form:form method="POST" action="add/category" modelAttribute="dealsCategory">
+	<form:input path="dealsCategoryId" hidden="true"/>
 		<table>
 			<tr>
-				<td><form:label path="dealsCategoryname">Type of Deal</form:label></td>
-				<td><form:input path="dealsCategoryname" /></td>
-			</tr>
-			<tr>
+				<td><form:label path="dealsCategoryName">Type of Deal</form:label></td>
+				<td><form:input path="dealsCategoryName" /></td>
 				<td><form:label path="dealsCategoryDescription">Category Description</form:label></td>
 				<td><form:input path="dealsCategoryDescription" /></td>
-			</tr>
-			<tr>
 				<td colspan="2"><input type="submit" value="Submit" /></td>
 			</tr>
 		</table>
 	</form:form>
+<!-- 	<div> -->
+<!-- 		<table> -->
+<!-- 			<tbody> -->
+<!-- 				<tr> -->
+<!-- 					<th>DEALSCATEGORYID</th> -->
+<!-- 					<th>DEALSCATEGORYDESCRIPTION</th> -->
+<!-- 					<th>DEALSCATEGORYNAME</th> -->
+<!-- 				</tr> -->
+<%-- 				<c:forEach items="${listDealsCategories}" var="DealsCategory"> --%>
+<!-- 					<tr> -->
+<%-- 						<td><c:out value="${DealsCategory.dealsCategoryId}"></c:out></td> --%>
+<%-- 						<td><c:out value="${DealsCategory.dealsCategoryname}"></c:out></td> --%>
+<%-- 						<td><c:out value="${DealsCategory.dealsCategoryDescription}"></c:out></td> --%>
+<!-- 					</tr> -->
+<%-- 				</c:forEach> --%>
+<!-- 				</tbody> -->
+<!-- 		</table> -->
+<!-- 		<br> <br> -->
+<!-- 	</div> -->
 	<div ng-app="getDealsCategory" ng-controller="DealsCategoryController">
 		<table>
 			<tbody>
@@ -47,13 +58,6 @@ table, th, td {
 					<th>DEALSCATEGORYNAME</th>
 					<th>EDIT|DELETE</th>
 				</tr>
-				<%-- <c:forEach items="${listDealsCategories}" var="DealsCategory">
-					<tr>
-						<td><c:out value="${DealsCategory.dealsCategoryId}"></c:out></td>
-						<td><c:out value="${DealsCategory.dealsCategoryname}"></c:out></td>
-						<td><c:out value="${DealsCategory.dealsCategoryDescription}"></c:out></td>
-					</tr>
-				</c:forEach> --%>
 				<tr ng-repeat="d in deals">
 					<td>{{d.dealsCategoryId}}</td>
 					<td>{{d.dealsCategoryName}}</td>
@@ -62,7 +66,7 @@ table, th, td {
 				</tr>
 			</tbody>
 		</table>
-		<br> <br>
+		<br><br>
 	</div>
 	<script>
 						angular.module('getDealsCategory', []).controller(

@@ -21,11 +21,11 @@ public class DealsCategory {
 		this.dealsCategoryId = dealsCategoryId;
 	}
 
-	public String getdealsCategoryname() {
+	public String getdealsCategoryName() {
 		return dealsCategoryName;
 	}
 
-	public void setdealsCategoryname(String dealsCategoryname) {
+	public void setdealsCategoryName(String dealsCategoryname) {
 		this.dealsCategoryName = dealsCategoryname;
 	}
 

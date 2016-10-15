@@ -17,29 +17,30 @@ public class DealsCategoryController {
 	@Autowired
 	private DealsCategoryService dealsCategoryService;
 
-	@RequestMapping("/addCategory")
+	@RequestMapping(value="/add/category", method= RequestMethod.POST)
 	public String addDealsCategories(@ModelAttribute("dealsCategory") DealsCategory dealsCategory) {
-		dealsCategoryService.createDealsCategory(dealsCategory);
-		return "redirect:/categories";
+		this.dealsCategoryService.createDealsCategory(dealsCategory);
+		return "redirect:/category";
 	}
 
-	@RequestMapping("/categories")
-	public String getCat(Model model)
+	@RequestMapping("/category")
+	public String getCategory(Model model)
 	{
 		model.addAttribute("dealsCategory", new DealsCategory());
 		model.addAttribute("ListDealsCategories", dealsCategoryService.getCategories());
+		model.addAttribute("listDealsCategories", dealsCategoryService.listDealsCategories());
 		return "category";
 	}
 	
 	@RequestMapping(value= "/editCategory-{dealsCategoryId}", method= RequestMethod.GET)
 	public String editCategory(@PathVariable("dealsCategoryId") int dealsCategoryId, Model model) {
-		dealsCategoryService.getById(dealsCategoryId);
+		model.addAttribute("dealsCategory", dealsCategoryService.getById(dealsCategoryId));
 		return "category";
 	}
 	
 	@RequestMapping(value= "/delete-{dealsCategoryId}", method= RequestMethod.GET)
 	public String delete(@PathVariable("dealsCategoryId") int dealsCategoryId) {
 		dealsCategoryService.deleteCategory(dealsCategoryId);
-		return "redirect:/categories";
+		return "redirect:/category";
 	}
 }
