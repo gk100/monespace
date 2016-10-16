@@ -1,7 +1,0 @@
-com\monespace\DAO\DealsCategoryDAO.class
-com\monespace\model\DealsCategory.class
-com\monespace\model\Housing.class
-com\monespace\DAOImpl\DealsCategoryDAOImpl.class
-com\monespace\controller\DealsCategoryController.class
-com\monespace\controller\HousingWebPage.class
-com\monespace\Service\DealsCategoryService.class

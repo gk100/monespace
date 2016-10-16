@@ -29,7 +29,7 @@ public class PropertyDealsSubCategoryController {
 	
 	@RequestMapping("add/subCategory")
 	public String addPropertyDealsSubCategory(@ModelAttribute("propertyDealsSubCategory")PropertyDealsSubCategory propertyDealsSubCategory){
-		DealsCategory dealsCategory= dealsCategoryService.getIdFromName(propertyDealsSubCategory.getDealscategory().getdealsCategoryname());
+		DealsCategory dealsCategory= dealsCategoryService.getIdFromName(propertyDealsSubCategory.getDealscategory().getdealsCategoryName());
 		dealsCategoryService.createDealsCategory(dealsCategory);;
 		propertyDealsSubCategory.setDealscategory(dealsCategory);
 		propertyDealsSubCategory.setDealsCategoryId(dealsCategory.getdealsCategoryId());
