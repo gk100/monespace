@@ -24,28 +24,53 @@ public class PropertyDealsSubCategoryDAOImpl implements PropertyDealsSubCategory
 
 	@SuppressWarnings("unchecked")
 	public List<PropertyDealsSubCategory> propertyDealsSubCategoryList() {
-		
-		List<PropertyDealsSubCategory> propertyDealsSubCategoryList = sessionFactory.getCurrentSession().createQuery("From PropertyDealsSubCategory").getResultList();
+
+		List<PropertyDealsSubCategory> propertyDealsSubCategoryList = sessionFactory.getCurrentSession()
+				.createQuery("From PropertyDealsSubCategory").getResultList();
 		return propertyDealsSubCategoryList;
 	}
 
 	@SuppressWarnings("unchecked")
 	public String propertyDealsSubCategoryListJson() {
 		Gson gson = new Gson();
-		List<PropertyDealsSubCategory> propertyDealsList = sessionFactory.getCurrentSession().createQuery("From PropertyDealsSubCategory").getResultList();
+		List<PropertyDealsSubCategory> propertyDealsList = sessionFactory.getCurrentSession()
+				.createQuery("From PropertyDealsSubCategory").getResultList();
 		String propertyList = gson.toJson(propertyDealsList);
 		return propertyList;
 	}
 
 	@SuppressWarnings("unchecked")
-	public PropertyDealsSubCategory getIdFromName(String propertyDealsSubCategoryName) {
-		String query = "from PropertyDealsSubcategory where propertyDealsSubCategoryName='"+ propertyDealsSubCategoryName + "'";
-		List<PropertyDealsSubCategory> propertyDealsSubCategoryList = sessionFactory.getCurrentSession().createQuery(query).getResultList();
+	public PropertyDealsSubCategory getIdFromName(String propertyType) {
+		String query = "from PropertyDealsSubCategory where propertyType='" + propertyType + "'";
+		List<PropertyDealsSubCategory> propertyDealsSubCategoryList = sessionFactory.getCurrentSession()
+				.createQuery(query).getResultList();
 		if (propertyDealsSubCategoryList != null && !propertyDealsSubCategoryList.isEmpty()) {
 			return propertyDealsSubCategoryList.get(0);
 		} else {
 			return null;
 		}
+	}
+
+	public void deleteSubCategory(int propertyDealsSubCategoryId) {
+		// TODO Auto-generated method stub
+		PropertyDealsSubCategory propertyDealsSubCategory = new PropertyDealsSubCategory();
+		propertyDealsSubCategory.setPropertyDealsSubCategoryId(propertyDealsSubCategoryId);
+		sessionFactory.getCurrentSession().delete(propertyDealsSubCategory);
+	}
+
+	@SuppressWarnings("unchecked")
+	public PropertyDealsSubCategory getbyId(int propertyDealsSubCategoryId) {
+		// TODO Auto-generated method stub
+		String newquery = "from PropertyDealsSubCategory where propertyDealsSubCategoryId="
+				+ propertyDealsSubCategoryId;
+		List<PropertyDealsSubCategory> propertyDealsSubCategoryList = this.sessionFactory.getCurrentSession()
+				.createQuery(newquery).getResultList();
+		if (propertyDealsSubCategoryList != null && !propertyDealsSubCategoryList.isEmpty()) {
+			return propertyDealsSubCategoryList.get(0);
+		} else {
+			return null;
+		}
+
 	}
 
 }

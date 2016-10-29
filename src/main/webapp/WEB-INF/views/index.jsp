@@ -3,9 +3,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<title>Bootstrap Case</title>
+<title>Mon Espace!</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- Bootstrap Core CSS -->
 <link rel="stylesheet" href="resources/css/bootstrap.min.css" />
 <!-- Custom CSS -->
@@ -18,31 +18,78 @@
 <script src="resources/js/jquery.min.js"></script>
 </head>
 <body>
-	<nav class="navbar navbar-inverse">
-	<div class="container-fluid">
-		<div class="navbar-header">
-			<a class="navbar-brand" href="#"><i>Mon Espace</i></a>
-		</div>
-		<ul class="nav navbar-nav">
-			<li class="active"><a href="#">Home</a></li>
-			<li class="dropdown"><a class="dropdown-toggle"
-				data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
-				<ul class="dropdown-menu">
-					<li><a href="#">Page 1-1</a></li>
-					<li><a href="#">Page 1-2</a></li>
-					<li><a href="#">Page 1-3</a></li>
-				</ul></li>
-			<li><a href="#">Page 2</a></li>
-		</ul>
-		<ul class="nav navbar-nav navbar-center">
-			<li><a href="#"><span class="glyphicon glyphicon-user"></span>
-					Register</a></li>
-			<li><a href="#"><span class="glyphicon glyphicon-log-in"></span>
-					Login</a></li>
-		</ul>
-	</div>
-	</nav>	
-<!-- Header -->
+	<!-- Navbar -->
+<!-- 	<nav class="navbar navbar-transparent"> -->
+<!-- 	<div class="container-fluid"> -->
+<!-- 		<div class="navbar-header"> -->
+<!-- 			<button type="button" class="navbar-toggle" data-toggle="collapse" -->
+<!-- 				data-target="#myNavbar"> -->
+<!-- 				<span class="icon-bar"></span> <span class="icon-bar"></span> <span -->
+<!-- 					class="icon-bar"></span> -->
+<!-- 			</button> -->
+<!-- 			<a class="navbar-brand" href="#"><i>Mon Espace</i></a> -->
+<!-- 		</div> -->
+<!-- 		<div class="collapse navbar-collapse" id="myNavbar"> -->
+<!-- 			<ul class="nav navbar-nav"> -->
+<!-- 				<li class="active"><a href="http://localhost:8085/monespace/home">Home</a></li> -->
+<!-- 								<li class="dropdown"><a class="dropdown-toggle" -->
+<!-- 									data-toggle="dropdown" href="#">Mumbai <span class="caret"></span></a> -->
+<!-- 									<ul class="dropdown-menu"> -->
+<!-- 										<li><a href="">Delhi</a></li> -->
+<!-- 										<li><a href="">Kolkata</a></li> -->
+<!-- 										<li><a href="">Chennai</a></li> -->
+<!-- 									</ul></li> -->
+<!-- 								<li><a href="#">About Us</a></li> -->
+<!-- 								<li><a href="#">Contact us</a></li> -->
+<!-- 			</ul> -->
+			<!-- 			<form class="form-inline center"> -->
+			<!-- 				<input class="form-control" type="text" placeholder="Search"> -->
+			<!-- 				<button class="btn btn-outline-success" type="submit">Search</button> -->
+			<!-- 			</form> -->
+
+<!-- 			<ul class="nav navbar-nav navbar-right"> -->
+<!-- 				<li><a href="#"><span class="glyphicon glyphicon-user"></span> -->
+<!-- 						Register</a></li> -->
+<!-- 				<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> -->
+<!-- 						Login</a></li> -->
+<!-- 			</ul> -->
+<!-- 		</div> -->
+<!-- 	</div> -->
+<!-- 	</nav> -->
+
+<nav id="mainNav" class="navbar navbar-default navbar-fixed-top affix-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">Start Bootstrap</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="">
+                        <a class="page-scroll" href="#about">About</a>
+                    </li>
+                    <li class="">
+                        <a class="page-scroll" href="#services">Services</a>
+                    </li>
+                    <li class="">
+                        <a class="page-scroll" href="#portfolio">Portfolio</a>
+                    </li>
+                    <li class="">
+                        <a class="page-scroll" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+	<!-- Navbar Closed-->
+	<!-- Header -->
 	<header id="top" class="header">
 	<div class="text-vertical-center">
 		<h1>
@@ -89,7 +136,7 @@
 							</h4>
 							<!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>-->
 							<!--<a href="#" class="btn btn-light">Learn More</a>-->
-							<a href="#" class="btn btn-light">Click Here</a>
+							<a href="http://localhost:8085/monespace/home" class="btn btn-light">Click Here</a>
 						</div>
 					</div>
 					<div class="col-md-3 col-sm-6">
@@ -103,7 +150,7 @@
 							</h4>
 							<!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>-->
 							<!--<a href="#" class="btn btn-light">Learn More</a>-->
-							<a href="#" class="btn btn-light">Click Here</a>
+							<a href="http://localhost:8085/monespace/home" class="btn btn-light">Click Here</a>
 						</div>
 					</div>
 					<div class="col-md-3 col-sm-6">
@@ -117,7 +164,7 @@
 							</h4>
 							<!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>-->
 							<!--<a href="#" class="btn btn-light">Learn More</a>-->
-							<a href="#" class="btn btn-light">Click Here</a>
+							<a href="http://localhost:8085/monespace/home" class="btn btn-light">Click Here</a>
 						</div>
 					</div>
 					<div class="col-md-3 col-sm-6">
@@ -131,7 +178,7 @@
 							</h4>
 							<!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>  -->
 							<!--<a href="#" class="btn btn-light">Learn More</a>-->
-							<a href="#" class="btn btn-light">Click Here</a>
+							<a href="http://localhost:8085/monespace/home" class="btn btn-light">Click Here</a>
 						</div>
 					</div>
 					<div class="col-md-3 col-sm-6">
@@ -145,7 +192,7 @@
 							</h4>
 							<!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>-->
 							<!--<a href="#" class="btn btn-light">Learn More</a>-->
-							<a href="#" class="btn btn-light">Click Here</a>
+							<a href="http://localhost:8085/monespace/home" class="btn btn-light">Click Here</a>
 						</div>
 					</div>
 					<div class="col-md-3 col-sm-6">
@@ -159,7 +206,7 @@
 							</h4>
 							<!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>-->
 							<!--<a href="#" class="btn btn-light">Learn More</a>-->
-							<a href="#" class="btn btn-light">Click Here</a>
+							<a href="http://localhost:8085/monespace/home" class="btn btn-light">Click Here</a>
 						</div>
 					</div>
 					<div class="col-md-3 col-sm-6">
@@ -173,7 +220,7 @@
 							</h4>
 							<!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>-->
 							<!--<a href="#" class="btn btn-light">Learn More</a>-->
-							<a href="#" class="btn btn-light">Click Here</a>
+							<a href="http://localhost:8085/monespace/home" class="btn btn-light">Click Here</a>
 						</div>
 					</div>
 					<div class="col-md-3 col-sm-6">
@@ -187,7 +234,7 @@
 							</h4>
 							<!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>-->
 							<!--<a href="#" class="btn btn-light">Learn More</a>-->
-							<a href="#" class="btn btn-light">Click Here</a>
+							<a href="http://localhost:8085/monespace/home" class="btn btn-light">Click Here</a>
 						</div>
 					</div>
 					<!-- /.row (nested) -->
@@ -198,60 +245,59 @@
 		</div>
 		<!-- /.container -->
 	</section>
-	 <!-- Callout -->
-    <aside class="callout">
-        <div class="text-vertical-center">
-            <h1>Vertically Centered Text</h1>
-        </div>
-    </aside>
+	<!-- Callout -->
+	<aside class="callout">
+	<div class="text-vertical-center">
+		<h1>Vertically Centered Text</h1>
+	</div>
+	</aside>
 
-    <!-- Portfolio -->
-    <section id="portfolio" class="portfolio">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h2>Our Work</h2>
-                    <hr class="small">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-1.jpg">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-2.jpg">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-3.jpg">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-4.jpg">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /.row (nested) -->
-                    <a href="#" class="btn btn-dark">View More Items</a>
-                </div>
-                <!-- /.col-lg-10 -->
-            </div>
-            <!-- /.row -->
-        </div>
-        <!-- /.container -->
-    </section>
-    
+	<!-- Portfolio -->
+	<section id="portfolio" class="portfolio">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-10 col-lg-offset-1 text-center">
+				<h2>Our Work</h2>
+				<hr class="small">
+				<div class="row">
+					<div class="col-md-6">
+						<div class="portfolio-item">
+							<a href="#"> <img class="img-portfolio img-responsive"
+								src="img/portfolio-1.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="portfolio-item">
+							<a href="#"> <img class="img-portfolio img-responsive"
+								src="img/portfolio-2.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="portfolio-item">
+							<a href="#"> <img class="img-portfolio img-responsive"
+								src="img/portfolio-3.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="portfolio-item">
+							<a href="#"> <img class="img-portfolio img-responsive"
+								src="img/portfolio-4.jpg">
+							</a>
+						</div>
+					</div>
+				</div>
+				<!-- /.row (nested) -->
+				<a href="#" class="btn btn-dark">View More Items</a>
+			</div>
+			<!-- /.col-lg-10 -->
+		</div>
+		<!-- /.row -->
+	</div>
+	<!-- /.container --> </section>
+
 	<div class="container">
 		<h3>Right Aligned Navbar</h3>
 		<p>The .navbar-right class is used to right-align navigation bar

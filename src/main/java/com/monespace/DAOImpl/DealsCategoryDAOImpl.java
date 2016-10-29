@@ -28,14 +28,14 @@ public class DealsCategoryDAOImpl implements DealsCategoryDAO {
 				.getResultList();
 		return categoryList;
 	}
-
+//fetching data using Json
 	@SuppressWarnings("unchecked")
 	public String getCategories() {
 		List<DealsCategory> categoryList = this.sessionFactory.getCurrentSession().createQuery("from DealsCategory")
 				.getResultList();
 		Gson gson = new Gson();
-		String Category = gson.toJson(categoryList);
-		return Category;
+		String category = gson.toJson(categoryList);
+		return category;
 	}
 
 	@SuppressWarnings("unchecked")
@@ -49,7 +49,7 @@ public class DealsCategoryDAOImpl implements DealsCategoryDAO {
 			return null;
 		}
 	}
-
+//delete entry
 	public void deleteCategory(int dealsCategoryId) {
 		DealsCategory dealscategory = new DealsCategory();
 		dealscategory.setdealsCategoryId(dealsCategoryId);

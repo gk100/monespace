@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<flow xmlns="http://www.springframework.org/schema/webflow"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/webflow 
+		http://www.springframework.org/schema/webflow/spring-webflow.xsd">
+	
+<!-- 	<var name="userDetail" class="com.monespace.model.UserDetail"/> -->
+	<on-start>
+		<evaluate expression="registrationHandler.initFlow()" result="flowScope.userDetail" />
+	</on-start>
+
+	<!-- view states start from here -->
+	<view-state id="start" view="registrationForm1" model="userDetail">
+		<transition on="submit" to="confirmDetails1"/>
+		<transition on="cancel" to="cancel"/>
+	</view-state>
+	
+	<view-state id="confirmDetails1" view="confirmForm1" model="userDetail">
+		<transition on="edit" to="start" />
+		<transition on="submit" to="permanentAddress" />
+		<transition on="cancel" to="cancel"/>
+	</view-state>
+	
+	<view-state id="permanentAddress" view="registrationForm2" model="userPermanentAddress">
+		<transition on="edit" to="confirmDetails1" />
+		<transition on="submit" to="confirmDetails2"/>
+		<transition on="cancel" to="cancel"/>
+	</view-state>
+	
+	<view-state id="confirmDetails2" view="confirmForm2" model="userPermanentAddress">
+		<transition on="edit" to="permanentAddress" />
+		<transition on="submit" to="billingAddress" />
+		<transition on="cancel" to="cancel"/>
+	</view-state>
+	
+	<view-state id="billingAddress" view="registrationForm3" model="userBillingAddress">
+		<transition on="edit" to="confirmDetails2"/>
+		<transition on="submit" to="confirmDetails3"/>
+		<transition on="cancel" to="cancel"/>
+	</view-state>
+	
+	<view-state id="confirmDetails3" view="confirmForm3" model="userPermanentAddress">
+		<transition on="edit" to="billingAddress" />
+		<transition on="submit" to="success" />
+		<transition on="cancel" to="cancel"/>
+	</view-state>
+	
+	<end-state id="success" view="externalRedirect:home"/>
+	<end-state id="cancel" view="externalRedirect:/"/>
+	
+</flow>

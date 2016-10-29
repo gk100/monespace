@@ -3,14 +3,11 @@ package com.monespace.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-
 @Controller
-public class HousingWebPage 
-{
+public class HousingWebPage {
 	@RequestMapping("/")
-	public String hello() 
-	{
-		 
+	public String hello() {
+
 		return "index";
 	}
 }

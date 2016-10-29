@@ -27,7 +27,7 @@ public class DealsCategoryController {
 	public String getCategory(Model model)
 	{
 		model.addAttribute("dealsCategory", new DealsCategory());
-		model.addAttribute("ListDealsCategories", dealsCategoryService.getCategories());
+		model.addAttribute("listDealsCategory", dealsCategoryService.getCategories());
 		model.addAttribute("listDealsCategories", dealsCategoryService.listDealsCategories());
 		return "category";
 	}
@@ -38,7 +38,7 @@ public class DealsCategoryController {
 		return "category";
 	}
 	
-	@RequestMapping(value= "/delete-{dealsCategoryId}", method= RequestMethod.GET)
+	@RequestMapping(value= "/deleteCategory-{dealsCategoryId}", method= RequestMethod.GET)
 	public String delete(@PathVariable("dealsCategoryId") int dealsCategoryId) {
 		dealsCategoryService.deleteCategory(dealsCategoryId);
 		return "redirect:/category";

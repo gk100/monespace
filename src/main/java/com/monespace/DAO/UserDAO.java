@@ -1,8 +1,8 @@
 package com.monespace.DAO;
 
-import com.monespace.model.UserDetails;
+import com.monespace.model.UserDetail;
 
 public interface UserDAO {
 
-	public void saveOrUpdate(UserDetails userDetails);
+	public void saveOrUpdate(UserDetail userDetail);
 }
