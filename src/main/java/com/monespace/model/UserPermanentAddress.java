@@ -1,12 +1,18 @@
 package com.monespace.model;
 
+import java.io.Serializable;
+
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 @Entity
-public class UserPermanentAddress {
+public class UserPermanentAddress implements Serializable {
 
 	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int permanentId;
 	private int houseNumber;
 	private String houseName;
@@ -15,6 +21,9 @@ public class UserPermanentAddress {
 	private String city;
 	private String state;
 	private String pincode;
+	
+	@OneToOne
+	private UserDetail userDetail;
 
 	public int getPermanentId() {
 		return permanentId;
@@ -79,4 +88,13 @@ public class UserPermanentAddress {
 	public void setPincode(String pincode) {
 		this.pincode = pincode;
 	}
+
+	public UserDetail getUserDetail() {
+		return userDetail;
+	}
+
+	public void setUserDetail(UserDetail userDetail) {
+		this.userDetail = userDetail;
+	}
+
 }
