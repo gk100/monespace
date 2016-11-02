@@ -1,21 +1,21 @@
 package com.monespace.model;
 
+import java.io.Serializable;
+
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
 
 @Entity
-public class Role {
+public class Role implements Serializable {
 
 	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int roleId;
-	private int roleName;
-
-	@OneToOne
-	@JoinColumn(name = "roleId", nullable = false, insertable = false, updatable = false)
-	private User user;
-
+	private String roleName;
+	
+	
 	public int getRoleId() {
 		return roleId;
 	}
@@ -24,19 +24,12 @@ public class Role {
 		this.roleId = roleId;
 	}
 
-	public int getRoleName() {
+	public String getRoleName() {
 		return roleName;
 	}
 
-	public void setRoleName(int roleName) {
+	public void setRoleName(String roleName) {
 		this.roleName = roleName;
 	}
 
-	public User getUser() {
-		return getUser();
-	}
-
-	public void setUser(User user) {
-		this.user = user;
-	}
 }

@@ -2,6 +2,8 @@
 
 package com.monespace.model;
 
+import java.io.Serializable;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -9,18 +11,21 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
+import com.google.gson.annotations.Expose;
+
 @Entity
-public class PropertyDealsSubCategory {
+public class PropertyDealsSubCategory implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy= GenerationType.IDENTITY)
 	private int propertyDealsSubCategoryId;
+	@Expose
 	private String propertyType;
 
 	private int dealsCategoryId;
 	@ManyToOne
 	@JoinColumn(name="dealsCategoryId", nullable=false, insertable=false, updatable=false)
-	private DealsCategory dealscategory;
+	private DealsCategory dealsCategory;
 	
 	public int getPropertyDealsSubCategoryId() {
 		return propertyDealsSubCategoryId;
@@ -40,11 +45,11 @@ public class PropertyDealsSubCategory {
 	public void setDealsCategoryId(int dealsCategoryId) {
 		this.dealsCategoryId = dealsCategoryId;
 	}
-	public DealsCategory getDealscategory() {
-		return dealscategory;
+	public DealsCategory getDealsCategory() {
+		return dealsCategory;
 	}
-	public void setDealscategory(DealsCategory dealscategory) {
-		this.dealscategory = dealscategory;
+	public void setDealsCategory(DealsCategory dealsCategory) {
+		this.dealsCategory = dealsCategory;
 	}
 	
 }

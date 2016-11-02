@@ -1,18 +1,18 @@
 package com.monespace.model;
 
+import java.io.Serializable;
+
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
 
 @Entity
-public class User {
+public class User implements Serializable {
 
 	@Id
+	@GeneratedValue(strategy= GenerationType.IDENTITY)
 	private int userId;
-	@OneToOne
-	@JoinColumn(name = "UserId", nullable = false, insertable = false, updatable = false)
-	private UserDetails userDetails;
 	private String username;
 	private String password;
 	private boolean enabled;

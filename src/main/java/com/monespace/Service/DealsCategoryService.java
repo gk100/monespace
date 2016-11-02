@@ -10,7 +10,6 @@ import com.monespace.DAOImpl.DealsCategoryDAOImpl;
 import com.monespace.model.DealsCategory;
 
 @Service
-@Transactional
 public class DealsCategoryService {
 
 	@Autowired
@@ -25,7 +24,6 @@ public class DealsCategoryService {
 	public List<DealsCategory> listDealsCategories() {
 
 		return dealsCategoryDAOImpl.listDealsCategories();
-
 	}
 
 	@Transactional
@@ -41,7 +39,7 @@ public class DealsCategoryService {
 	public void deleteCategory(int dealsCategoryId) {
 		dealsCategoryDAOImpl.deleteCategory(dealsCategoryId);
 	}
-	
+	@Transactional
 	public DealsCategory getById(int dealsCategoryId) {
 		return dealsCategoryDAOImpl.getById(dealsCategoryId);
 	}
