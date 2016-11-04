@@ -5,6 +5,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.PathVariable;
+
 import com.monespace.Service.DealsCategoryService;
 import com.monespace.Service.PropertyDealsSubCategoryService;
 import com.monespace.model.DealsCategory;
@@ -21,21 +24,36 @@ public class PropertyDealsSubCategoryController {
 	
 	@RequestMapping("/subCategories")
 	public String propertyDealsSubCategory(Model model) {
-		model.addAttribute("subCategory", new PropertyDealsSubCategory());
-		model.addAttribute("listSubCategory", this.propertyDealsSubCategoryService.propertyDealsSubCategoryList());
+		model.addAttribute("propertyDealsSubCategory", new PropertyDealsSubCategory());
+		model.addAttribute("listSubCategory", this.propertyDealsSubCategoryService.propertyDealsSubCategoryListJson());
 		model.addAttribute("listCategory", this.dealsCategoryService.listDealsCategories());
+		model.addAttribute("listDealsCategories", this.propertyDealsSubCategoryService.propertyDealsSubCategoryList());
 		return "subCategories";
 	}
 	
-	@RequestMapping("add/subCategory")
+	@RequestMapping("/add/subCategories")
 	public String addPropertyDealsSubCategory(@ModelAttribute("propertyDealsSubCategory")PropertyDealsSubCategory propertyDealsSubCategory){
-		DealsCategory dealsCategory= dealsCategoryService.getIdFromName(propertyDealsSubCategory.getDealscategory().getdealsCategoryName());
-		dealsCategoryService.createDealsCategory(dealsCategory);;
-		propertyDealsSubCategory.setDealscategory(dealsCategory);
+		DealsCategory dealsCategory= dealsCategoryService.getIdFromName(propertyDealsSubCategory.getDealsCategory().getdealsCategoryName());
+		dealsCategoryService.createDealsCategory(dealsCategory);
+		propertyDealsSubCategory.setDealsCategory(dealsCategory);
 		propertyDealsSubCategory.setDealsCategoryId(dealsCategory.getdealsCategoryId());
 		this.propertyDealsSubCategoryService.createPropertyDealsSubCategory(propertyDealsSubCategory);
 		return "redirect:/subCategories";
+	}
+	
+	@RequestMapping(value= "/editSubCategory-{propertyDealsSubCategoryId}", method= RequestMethod.GET)
+	public String editSubCategory(@PathVariable("propertyDealsSubCategoryId") int propertyDealsSubCategoryId, Model model) {
 		
-		
-}
+		model.addAttribute("listCategory", this.dealsCategoryService.listDealsCategories());
+		model.addAttribute("propertyDealsSubCategoryList", this.propertyDealsSubCategoryService.propertyDealsSubCategoryList());
+		model.addAttribute("propertyDealsSubCategory", propertyDealsSubCategoryService.getbyId(propertyDealsSubCategoryId));
+		model.addAttribute("propertyDealsSubCategoryListJson", this.propertyDealsSubCategoryService.propertyDealsSubCategoryListJson());
+		return "subCategories";
+	}
+	
+	@RequestMapping(value="/deleteSubCategory-{propertyDealsSubCategoryId}", method=RequestMethod.GET)
+	public String deleteSubCategory(@PathVariable("propertyDealsSubCategoryId") int propertyDealsSubCategoryId) {
+		propertyDealsSubCategoryService.deleteSubCategory(propertyDealsSubCategoryId);
+		return "redirect:/subCategories";
+	}
 }
