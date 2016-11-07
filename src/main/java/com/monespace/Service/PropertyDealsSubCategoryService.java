@@ -35,4 +35,14 @@ public class PropertyDealsSubCategoryService {
 		return propertyDealsSubCategoryDAOImpl.getIdFromName(propertyDealsSubCategoryName);
 	}
 	
+	@Transactional
+	public void deleteSubCategory(int propertyDealsSubCategoryId) {
+		propertyDealsSubCategoryDAOImpl.deleteSubCategory(propertyDealsSubCategoryId);
+	}
+	
+	@Transactional
+	public PropertyDealsSubCategory getbyId(int propertyDealsSubCategoryId) {
+		return propertyDealsSubCategoryDAOImpl.getbyId(propertyDealsSubCategoryId);
+	}
+	
 }

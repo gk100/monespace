@@ -1,261 +1,172 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>Bootstrap Case</title>
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>MonEspace!-Buy/Sell/Rent/Construct/Properties Portal</title>
 <!-- Bootstrap Core CSS -->
-<link rel="stylesheet" href="resources/css/bootstrap.min.css" />
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet">
 <!-- Custom CSS -->
-<link rel="stylesheet" href="resources/css/stylish-portfolio.css" />
-<!-- Custom Fonts -->
-<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" />
-<link
-	href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic"
-	rel="stylesheet" type="text/css">
-<script src="resources/js/jquery.min.js"></script>
+    <link href="resources/css/full-slider.css" rel="stylesheet">
+     <link href="resources/css/my-style.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
 <body>
-	<nav class="navbar navbar-inverse">
-	<div class="container-fluid">
-		<div class="navbar-header">
-			<a class="navbar-brand" href="#"><i>Mon Espace</i></a>
-		</div>
-		<ul class="nav navbar-nav">
-			<li class="active"><a href="#">Home</a></li>
-			<li class="dropdown"><a class="dropdown-toggle"
-				data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
-				<ul class="dropdown-menu">
-					<li><a href="#">Page 1-1</a></li>
-					<li><a href="#">Page 1-2</a></li>
-					<li><a href="#">Page 1-3</a></li>
-				</ul></li>
-			<li><a href="#">Page 2</a></li>
-		</ul>
-		<ul class="nav navbar-nav navbar-center">
-			<li><a href="#"><span class="glyphicon glyphicon-user"></span>
-					Register</a></li>
-			<li><a href="#"><span class="glyphicon glyphicon-log-in"></span>
-					Login</a></li>
-		</ul>
-	</div>
-	</nav>	
-<!-- Header -->
-	<header id="top" class="header">
-	<div class="text-vertical-center">
-		<h1>
-			<i>Mon Espace</i>
-		</h1>
-		<h3>
-			<i>"Search &amp; Find Your Own Space To Live Together &amp; Enjoy
-				Life...!"</i>
-		</h3>
-		<br> <a href="#about" class="btn btn-dark btn-lg">We Offer
-			You...</a>
-	</div>
-	</header>
-	<!-- About -->
-	<section id="about" class="about">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-12 text-center">
-				<h2>Here We can put Carousel of any Advertisement or an
-					announcement</h2>
-				<!--<p class="lead">This theme features some wonderful photography courtesy of <a target="_blank" href="http://join.deathtothestockphoto.com/">Death to the Stock Photo</a>.</p>-->
-			</div>
-		</div>
-		<!-- /.row -->
-	</div>
-	<!-- /.container --> </section>
-	<!-- Services -->
-	<!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
-	<section id="services" class="services bg-primary">
-	<div class="container">
-		<div class="row text-center">
-			<div class="col-lg-10 col-lg-offset-1">
-				<h2>Our Services</h2>
-				<hr class="small">
-				<div class="row">
-					<div class="col-md-3 col-sm-6">
-						<div class="service-item">
-							<span class="fa-stack fa-4x"> <i
-								class="fa fa-circle fa-stack-2x"></i> <!--<i class="fa fa-cloud fa-stack-1x text-primary"></i>-->
-							</span>
-							<h4>
-								<!--<strong>Service Name</strong>-->
-								<strong>Buy!</strong>
-							</h4>
-							<!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>-->
-							<!--<a href="#" class="btn btn-light">Learn More</a>-->
-							<a href="#" class="btn btn-light">Click Here</a>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-6">
-						<div class="service-item">
-							<span class="fa-stack fa-4x"> <i
-								class="fa fa-circle fa-stack-2x"></i> <i
-								class="fa fa-compass fa-stack-1x text-primary"></i>
-							</span>
-							<h4>
-								<strong>Sell Property</strong>
-							</h4>
-							<!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>-->
-							<!--<a href="#" class="btn btn-light">Learn More</a>-->
-							<a href="#" class="btn btn-light">Click Here</a>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-6">
-						<div class="service-item">
-							<span class="fa-stack fa-4x"> <i
-								class="fa fa-circle fa-stack-2x"></i> <i
-								class="fa fa-flask fa-stack-1x text-primary"></i>
-							</span>
-							<h4>
-								<strong>Rent Property</strong>
-							</h4>
-							<!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>-->
-							<!--<a href="#" class="btn btn-light">Learn More</a>-->
-							<a href="#" class="btn btn-light">Click Here</a>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-6">
-						<div class="service-item">
-							<span class="fa-stack fa-4x"> <i
-								class="fa fa-circle fa-stack-2x"></i> <i
-								class="fa fa-shield fa-stack-1x text-primary"></i>
-							</span>
-							<h4>
-								<strong>Construct Property</strong>
-							</h4>
-							<!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>  -->
-							<!--<a href="#" class="btn btn-light">Learn More</a>-->
-							<a href="#" class="btn btn-light">Click Here</a>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-6">
-						<div class="service-item">
-							<span class="fa-stack fa-4x"> <i
-								class="fa fa-circle fa-stack-2x"></i> <!--<i class="fa fa-cloud fa-stack-1x text-primary"></i>-->
-							</span>
-							<h4>
-								<!--<strong>Service Name</strong>-->
-								<strong>Finance to Property</strong>
-							</h4>
-							<!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>-->
-							<!--<a href="#" class="btn btn-light">Learn More</a>-->
-							<a href="#" class="btn btn-light">Click Here</a>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-6">
-						<div class="service-item">
-							<span class="fa-stack fa-4x"> <i
-								class="fa fa-circle fa-stack-2x"></i> <!--<i class="fa fa-cloud fa-stack-1x text-primary"></i>-->
-							</span>
-							<h4>
-								<!--<strong>Service Name</strong>-->
-								<strong>Consultancy about Property</strong>
-							</h4>
-							<!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>-->
-							<!--<a href="#" class="btn btn-light">Learn More</a>-->
-							<a href="#" class="btn btn-light">Click Here</a>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-6">
-						<div class="service-item">
-							<span class="fa-stack fa-4x"> <i
-								class="fa fa-circle fa-stack-2x"></i> <!--<i class="fa fa-cloud fa-stack-1x text-primary"></i>-->
-							</span>
-							<h4>
-								<!--<strong>Service Name</strong>-->
-								<strong>Current Updates</strong>
-							</h4>
-							<!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>-->
-							<!--<a href="#" class="btn btn-light">Learn More</a>-->
-							<a href="#" class="btn btn-light">Click Here</a>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-6">
-						<div class="service-item">
-							<span class="fa-stack fa-4x"> <i
-								class="fa fa-circle fa-stack-2x"></i> <!--<i class="fa fa-cloud fa-stack-1x text-primary"></i>-->
-							</span>
-							<h4>
-								<!--<strong>Service Name</strong>-->
-								<strong>Customer Support</strong>
-							</h4>
-							<!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>-->
-							<!--<a href="#" class="btn btn-light">Learn More</a>-->
-							<a href="#" class="btn btn-light">Click Here</a>
-						</div>
-					</div>
-					<!-- /.row (nested) -->
-				</div>
-				<!-- /.col-lg-10 -->
-			</div>
-			<!-- /.row -->
-		</div>
-		<!-- /.container -->
-	</section>
-	 <!-- Callout -->
-    <aside class="callout">
-        <div class="text-vertical-center">
-            <h1>Vertically Centered Text</h1>
-        </div>
-    </aside>
-
-    <!-- Portfolio -->
-    <section id="portfolio" class="portfolio">
+    <!-- Navigation -->
+    <nav class="navbar navbar-transparent navbar-fixed-top" role="navigation">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h2>Our Work</h2>
-                    <hr class="small">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-1.jpg">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-2.jpg">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-3.jpg">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-4.jpg">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /.row (nested) -->
-                    <a href="#" class="btn btn-dark">View More Items</a>
-                </div>
-                <!-- /.col-lg-10 -->
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>               
+                <a class="navbar-brand" href="http://localhost:8085/monespace/">Mon Espace</a>
             </div>
-            <!-- /.row -->
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="aboutUs">About us</a>
+                    </li>
+                    <li>
+                        <a href="home">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
         </div>
         <!-- /.container -->
-    </section>
-    
-	<div class="container">
-		<h3>Right Aligned Navbar</h3>
-		<p>The .navbar-right class is used to right-align navigation bar
-			buttons.</p>
-	</div>
+    </nav>
+    <!-- Full Page Image Background Carousel Header -->
+    <header id="myCarousel" class="carousel slide">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="resources/img/bg-Mumbai.jpg" data-slide-to="0" class="active"></li>
+            <li data-target="resources/img/bg-Delhi.jpg" data-slide-to="1"></li>
+            <li data-target="resources/img/bg-Kolkata.jpg" data-slide-to="2"></li>
+            <li data-target="resources/img/bg-Mumbai1.jpg" data-slide-to="3"></li>
+            <li data-target="resources/img/bg-Chennai.jpg" data-slide-to="4"></li>
+            <li data-target="resources/img/bg-Banguluru.jpg" data-slide-to="5"></li>
+        </ol>
+
+        <!-- Wrapper for Slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <!-- Set the first background image using inline CSS below. -->
+                <div class="fill" style="background-image:url('resources/img/bg-Mumbai.jpg');"></div>
+                <div class="carousel-caption">
+                    <h2><i><b>Mumbai</b></i></h2>
+                    <h2>Where you can Find Your Own Space to Live!...to Enjoy Life! </h2>
+                </div>
+            </div>
+            <div class="item">
+                <!-- Set the second background image using inline CSS below. -->
+                <div class="fill" style="background-image:url('resources/img/bg-Delhi.jpg');"></div>
+                <div class="carousel-caption">
+                    <h2>Delhi</h2>
+                     <h3><i>Where you can Find Your Own Space to Live!...to Enjoy Life!</i> </h3>
+                </div>
+            </div>
+            <div class="item">
+                <!-- Set the third background image using inline CSS below. -->
+                <div class="fill" style="background-image:url('resources/img/bg-Kolkata.jpg');"></div>
+                <div class="carousel-caption">
+                    <h2>Kolkata</h2>
+                     <h3>Where you can Find Your Own Space to Live!...to Enjoy Life! </h3>
+                </div>
+            </div>
+            <div class="item">
+                <!-- Set the third background image using inline CSS below. -->
+                <div class="fill" style="background-image:url('resources/img/bg-Mumbai1.jpg');"></div>
+                <div class="carousel-caption">
+                    <h2>Mumbai</h2>
+                     <h3>Where you can Find Your Own Space to Live!...to Enjoy Life! </h3>
+                </div>
+            </div>
+            <div class="item">
+                <!-- Set the third background image using inline CSS below. -->
+                <div class="fill" style="background-image:url('resources/img/bg-Chennai.jpg');"></div>
+                <div class="carousel-caption">
+                    <h2>Chennai</h2>
+                     <h3>Where you can Find Your Own Space to Live!...to Enjoy Life! </h3>
+                </div>
+            </div>
+             <div class="item">
+                <!-- Set the third background image using inline CSS below. -->
+                <div class="fill" style="background-image:url('resources/img/bg-Banguluru.jpg');"></div>
+                <div class="carousel-caption">
+                    <h2>Banguluru</h2>
+                     <h3>Where you can Find Your Own Space to Live!...to Enjoy Life! </h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="icon-prev"></span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="icon-next"></span>
+        </a>
+    </header>
+    <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-12">
+                <h3>Welcome to Mon Espace!</h3>
+                <h4>Where you can Find Your Own Space to Live!...to Enjoy Life!</h4> 
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- Footer -->
+        <div class="footer-bottom">
+        <div class="container">
+            <p class="pull-left"> Copyright © MonEspace! Plugin 2016. All right reserved. </p>
+            <div class="pull-right">
+                <ul class="nav nav-pills payments">
+                	<li><i class="fa fa-cc-visa"></i></li>
+                    <li><i class="fa fa-cc-mastercard"></i></li>
+                    <li><i class="fa fa-cc-amex"></i></li>
+                    <li><i class="fa fa-cc-paypal"></i></li>
+                </ul> 
+            </div>
+        </div>
+    </div>
+    <!--/.footer-bottom--> 
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="resources/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <!-- Script to Activate the Carousel -->
+    <script>
+    $('.carousel').carousel({
+        interval: 2500 //changes the speed
+    })
+    </script>
+
 </body>
+
 </html>
